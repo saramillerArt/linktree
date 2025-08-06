@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <!-- Content-Security-Policy für externe Widgets -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' https://storage.ko-fi.com https://www.paypal.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; frame-src https://www.paypal.com https://ko-fi.com;" />
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://www.paypal.com; img-src 'self' data: https:; script-src 'self' https://storage.ko-fi.com https://www.paypal.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; frame-src https://www.paypal.com https://ko-fi.com;" />
+
   <meta name="referrer" content="no-referrer" />
 
   
@@ -149,15 +150,7 @@
     <!-- PayPal Button -->
     <div id="paypal-container"></div>
 
-    <script>
-      // PayPal Button mit Fehlerbehandlung
-      paypal.HostedButtons({
-        hostedButtonId: "NRJWCKABZXM2N",
-        onError: function (err) {
-          console.error('Fehler beim Laden des PayPal Buttons:', err);
-        }
-      }).render("#paypal-container"); // Button hier rendern
-    </script>
+    <script src="paypal.js"></script>
 
     <footer>
       <a href="impressum.html" target="_blank" rel="noopener">Impressum & Datenschutz</a>
