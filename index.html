@@ -12,7 +12,9 @@
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       referrerpolicy="no-referrer" />
-  
+  <script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAUPn2PriefFcXYrB2lZlcCFLWOkeyTtJ-uL3fRupw1fWhyX1GiKiVpiHSnkujnH5_xF8Ga0T77I6I1H8&components=hosted-buttons&disable-funding=venmo&currency=EUR">
+  </script>
    <style>
     /* ---------- Basis-Design (≤ 599 px) ---------- */
     :root {
@@ -92,7 +94,12 @@
   <a class="button" href="https://throne.com/saramiller80" target="_blank" rel="noopener noreferrer">
   <i class="fa-solid fa-gift"></i><span>Throne‑Wunschliste</span>
   </a>
-
+  <div id="paypal-container-NRJWCKABZXM2N"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "NRJWCKABZXM2N",
+  }).render("#paypal-container-NRJWCKABZXM2N")
+</script>
   <!-- Spendenbuttons als 2×2 Grid -->
     <div class="tip-grid">
       <form class="donate-button" action="https://www.paypal.com/donate" method="post" target="_blank">
